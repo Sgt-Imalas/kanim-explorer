@@ -32,8 +32,24 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			menuStrip1 = new System.Windows.Forms.MenuStrip();
 			fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			kanimlabel = new System.Windows.Forms.ToolStripStatusLabel();
+			openMultipleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			individualKAnimFilesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			openTextureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			openBuildToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			openAnimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			saveAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			saveTextureAtlasAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			saveBuildAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			saveAnimAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			saveAllAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+			scmllabel = new System.Windows.Forms.ToolStripStatusLabel();
+			openSCMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			exportSCMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			exportSCMLAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
 			exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			exportEmptyAnimbytesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			exportTextureAtlasSpritesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,22 +73,6 @@
 			propertyGrid = new System.Windows.Forms.PropertyGrid();
 			label2 = new System.Windows.Forms.Label();
 			imageListIcons = new System.Windows.Forms.ImageList(components);
-			kanimlabel = new System.Windows.Forms.ToolStripStatusLabel();
-			scmllabel = new System.Windows.Forms.ToolStripStatusLabel();
-			toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-			exportSCMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			exportSCMLAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			openSCMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			saveTextureAtlasAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			saveBuildAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			saveAnimAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			saveAllAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			saveAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			individualKAnimFilesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			openTextureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			openBuildToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			openAnimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			openMultipleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)splitContainerOuter).BeginInit();
 			splitContainerOuter.Panel2.SuspendLayout();
@@ -102,6 +102,57 @@
 			fileToolStripMenuItem.Size = new System.Drawing.Size(37, 22);
 			fileToolStripMenuItem.Text = "File";
 			// 
+			// kanimlabel
+			// 
+			kanimlabel.Font = new System.Drawing.Font("Segoe UI", 7.25F);
+			kanimlabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+			kanimlabel.Name = "kanimlabel";
+			kanimlabel.Size = new System.Drawing.Size(34, 12);
+			kanimlabel.Text = "KAnim";
+			// 
+			// openMultipleToolStripMenuItem
+			// 
+			openMultipleToolStripMenuItem.Name = "openMultipleToolStripMenuItem";
+			openMultipleToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+			openMultipleToolStripMenuItem.Text = "Open KAnim...";
+			openMultipleToolStripMenuItem.Click += openMultipleToolStripMenuItem_Click;
+			// 
+			// individualKAnimFilesToolStripMenuItem1
+			// 
+			individualKAnimFilesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { openTextureToolStripMenuItem, openBuildToolStripMenuItem, openAnimToolStripMenuItem });
+			individualKAnimFilesToolStripMenuItem1.Name = "individualKAnimFilesToolStripMenuItem1";
+			individualKAnimFilesToolStripMenuItem1.Size = new System.Drawing.Size(223, 22);
+			individualKAnimFilesToolStripMenuItem1.Text = "Open Individual KAnim Files";
+			// 
+			// openTextureToolStripMenuItem
+			// 
+			openTextureToolStripMenuItem.Name = "openTextureToolStripMenuItem";
+			openTextureToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+			openTextureToolStripMenuItem.Text = "Texture...";
+			openTextureToolStripMenuItem.Click += openTextureToolStripMenuItem_Click;
+			// 
+			// openBuildToolStripMenuItem
+			// 
+			openBuildToolStripMenuItem.Name = "openBuildToolStripMenuItem";
+			openBuildToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+			openBuildToolStripMenuItem.Text = "Build...";
+			openBuildToolStripMenuItem.Click += openBuildToolStripMenuItem_Click;
+			// 
+			// openAnimToolStripMenuItem
+			// 
+			openAnimToolStripMenuItem.Name = "openAnimToolStripMenuItem";
+			openAnimToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+			openAnimToolStripMenuItem.Text = "Anim...";
+			openAnimToolStripMenuItem.Click += openAnimToolStripMenuItem_Click;
+			// 
+			// saveAllToolStripMenuItem
+			// 
+			saveAllToolStripMenuItem.Enabled = false;
+			saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
+			saveAllToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+			saveAllToolStripMenuItem.Text = "Save All...";
+			saveAllToolStripMenuItem.Click += saveAllToolStripMenuItem_Click;
+			// 
 			// saveAsToolStripMenuItem
 			// 
 			saveAsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { saveTextureAtlasAsToolStripMenuItem, saveBuildAsToolStripMenuItem, saveAnimAsToolStripMenuItem, saveAllAsToolStripMenuItem });
@@ -109,10 +160,77 @@
 			saveAsToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
 			saveAsToolStripMenuItem.Text = "Save As...";
 			// 
+			// saveTextureAtlasAsToolStripMenuItem
+			// 
+			saveTextureAtlasAsToolStripMenuItem.Enabled = false;
+			saveTextureAtlasAsToolStripMenuItem.Name = "saveTextureAtlasAsToolStripMenuItem";
+			saveTextureAtlasAsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+			saveTextureAtlasAsToolStripMenuItem.Text = "Save Texture As...";
+			saveTextureAtlasAsToolStripMenuItem.Click += SaveTextureAtlasAsToolStripMenuItem_Click;
+			// 
+			// saveBuildAsToolStripMenuItem
+			// 
+			saveBuildAsToolStripMenuItem.Enabled = false;
+			saveBuildAsToolStripMenuItem.Name = "saveBuildAsToolStripMenuItem";
+			saveBuildAsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+			saveBuildAsToolStripMenuItem.Text = "Save Build As...";
+			saveBuildAsToolStripMenuItem.Click += SaveBuildAsToolStripMenuItem_Click;
+			// 
+			// saveAnimAsToolStripMenuItem
+			// 
+			saveAnimAsToolStripMenuItem.Enabled = false;
+			saveAnimAsToolStripMenuItem.Name = "saveAnimAsToolStripMenuItem";
+			saveAnimAsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+			saveAnimAsToolStripMenuItem.Text = "Save Anim As...";
+			saveAnimAsToolStripMenuItem.Click += SaveAnimAsToolStripMenuItem_Click;
+			// 
+			// saveAllAsToolStripMenuItem
+			// 
+			saveAllAsToolStripMenuItem.Name = "saveAllAsToolStripMenuItem";
+			saveAllAsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+			saveAllAsToolStripMenuItem.Text = "Save All As...";
+			saveAllAsToolStripMenuItem.Click += saveAllAsToolStripMenuItem_Click;
+			// 
 			// toolStripSeparator5
 			// 
 			toolStripSeparator5.Name = "toolStripSeparator5";
 			toolStripSeparator5.Size = new System.Drawing.Size(220, 6);
+			// 
+			// scmllabel
+			// 
+			scmllabel.Font = new System.Drawing.Font("Segoe UI", 7.25F);
+			scmllabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+			scmllabel.Name = "scmllabel";
+			scmllabel.Size = new System.Drawing.Size(30, 12);
+			scmllabel.Text = "SCML";
+			// 
+			// openSCMLToolStripMenuItem
+			// 
+			openSCMLToolStripMenuItem.Name = "openSCMLToolStripMenuItem";
+			openSCMLToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+			openSCMLToolStripMenuItem.Text = "Open SCML...";
+			openSCMLToolStripMenuItem.Click += openSCMLToolStripMenuItem_Click_1;
+			// 
+			// exportSCMLToolStripMenuItem
+			// 
+			exportSCMLToolStripMenuItem.Enabled = false;
+			exportSCMLToolStripMenuItem.Name = "exportSCMLToolStripMenuItem";
+			exportSCMLToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+			exportSCMLToolStripMenuItem.Text = "Save SCML...";
+			exportSCMLToolStripMenuItem.Click += exportSCMLToolStripMenuItem_Click;
+			// 
+			// exportSCMLAsToolStripMenuItem
+			// 
+			exportSCMLAsToolStripMenuItem.Enabled = false;
+			exportSCMLAsToolStripMenuItem.Name = "exportSCMLAsToolStripMenuItem";
+			exportSCMLAsToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+			exportSCMLAsToolStripMenuItem.Text = "Save SCML As...";
+			exportSCMLAsToolStripMenuItem.Click += exportSCMLToolStripMenuItem_Click;
+			// 
+			// toolStripSeparator3
+			// 
+			toolStripSeparator3.Name = "toolStripSeparator3";
+			toolStripSeparator3.Size = new System.Drawing.Size(220, 6);
 			// 
 			// exportToolStripMenuItem
 			// 
@@ -317,124 +435,6 @@
 			imageListIcons.TransparentColor = System.Drawing.Color.Transparent;
 			imageListIcons.Images.SetKeyName(0, "build");
 			imageListIcons.Images.SetKeyName(1, "sprite");
-			// 
-			// kanimlabel
-			// 
-			kanimlabel.Font = new System.Drawing.Font("Segoe UI", 7.25F);
-			kanimlabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
-			kanimlabel.Name = "kanimlabel";
-			kanimlabel.Size = new System.Drawing.Size(34, 12);
-			kanimlabel.Text = "KAnim";
-			// 
-			// scmllabel
-			// 
-			scmllabel.Font = new System.Drawing.Font("Segoe UI", 7.25F);
-			scmllabel.ForeColor = System.Drawing.SystemColors.WindowFrame;
-			scmllabel.Name = "scmllabel";
-			scmllabel.Size = new System.Drawing.Size(30, 12);
-			scmllabel.Text = "SCML";
-			// 
-			// toolStripSeparator3
-			// 
-			toolStripSeparator3.Name = "toolStripSeparator3";
-			toolStripSeparator3.Size = new System.Drawing.Size(220, 6);
-			// 
-			// exportSCMLToolStripMenuItem
-			// 
-			exportSCMLToolStripMenuItem.Enabled = false;
-			exportSCMLToolStripMenuItem.Name = "exportSCMLToolStripMenuItem";
-			exportSCMLToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-			exportSCMLToolStripMenuItem.Text = "Save SCML";
-			exportSCMLToolStripMenuItem.Click += exportSCMLToolStripMenuItem_Click;
-			// 
-			// savescmlas
-			// 
-			exportSCMLAsToolStripMenuItem.Enabled = false;
-			exportSCMLAsToolStripMenuItem.Name = "savescmlas";
-			exportSCMLAsToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-			exportSCMLAsToolStripMenuItem.Text = "Save SCML As...";
-			exportSCMLAsToolStripMenuItem.Click += exportSCMLToolStripMenuItem_Click;
-			// 
-			// openSCMLToolStripMenuItem
-			// 
-			openSCMLToolStripMenuItem.Name = "openSCMLToolStripMenuItem";
-			openSCMLToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-			openSCMLToolStripMenuItem.Text = "Open SCML...";
-			openSCMLToolStripMenuItem.Click += openSCMLToolStripMenuItem_Click_1;
-			// 
-			// saveTextureAtlasAsToolStripMenuItem
-			// 
-			saveTextureAtlasAsToolStripMenuItem.Enabled = false;
-			saveTextureAtlasAsToolStripMenuItem.Name = "saveTextureAtlasAsToolStripMenuItem";
-			saveTextureAtlasAsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-			saveTextureAtlasAsToolStripMenuItem.Text = "Save Texture As...";
-			saveTextureAtlasAsToolStripMenuItem.Click += SaveTextureAtlasAsToolStripMenuItem_Click;
-			// 
-			// saveBuildAsToolStripMenuItem
-			// 
-			saveBuildAsToolStripMenuItem.Enabled = false;
-			saveBuildAsToolStripMenuItem.Name = "saveBuildAsToolStripMenuItem";
-			saveBuildAsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-			saveBuildAsToolStripMenuItem.Text = "Save Build As...";
-			saveBuildAsToolStripMenuItem.Click += SaveBuildAsToolStripMenuItem_Click;
-			// 
-			// saveAnimAsToolStripMenuItem
-			// 
-			saveAnimAsToolStripMenuItem.Enabled = false;
-			saveAnimAsToolStripMenuItem.Name = "saveAnimAsToolStripMenuItem";
-			saveAnimAsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-			saveAnimAsToolStripMenuItem.Text = "Save Anim As...";
-			saveAnimAsToolStripMenuItem.Click += SaveAnimAsToolStripMenuItem_Click;
-			// 
-			// saveAllAsToolStripMenuItem
-			// 
-			saveAllAsToolStripMenuItem.Name = "saveAllAsToolStripMenuItem";
-			saveAllAsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-			saveAllAsToolStripMenuItem.Text = "Save All As...";
-			saveAllAsToolStripMenuItem.Click += saveAllAsToolStripMenuItem_Click;
-			// 
-			// saveAllToolStripMenuItem
-			// 
-			saveAllToolStripMenuItem.Enabled = false;
-			saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
-			saveAllToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-			saveAllToolStripMenuItem.Text = "Save All...";
-			saveAllToolStripMenuItem.Click += saveAllToolStripMenuItem_Click;
-			// 
-			// individualKAnimFilesToolStripMenuItem1
-			// 
-			individualKAnimFilesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { openTextureToolStripMenuItem, openBuildToolStripMenuItem, openAnimToolStripMenuItem });
-			individualKAnimFilesToolStripMenuItem1.Name = "individualKAnimFilesToolStripMenuItem1";
-			individualKAnimFilesToolStripMenuItem1.Size = new System.Drawing.Size(223, 22);
-			individualKAnimFilesToolStripMenuItem1.Text = "Open Individual KAnim Files";
-			// 
-			// openTextureToolStripMenuItem
-			// 
-			openTextureToolStripMenuItem.Name = "openTextureToolStripMenuItem";
-			openTextureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			openTextureToolStripMenuItem.Text = "Texture...";
-			openTextureToolStripMenuItem.Click += openTextureToolStripMenuItem_Click;
-			// 
-			// openBuildToolStripMenuItem
-			// 
-			openBuildToolStripMenuItem.Name = "openBuildToolStripMenuItem";
-			openBuildToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			openBuildToolStripMenuItem.Text = "Build...";
-			openBuildToolStripMenuItem.Click += openBuildToolStripMenuItem_Click;
-			// 
-			// openAnimToolStripMenuItem
-			// 
-			openAnimToolStripMenuItem.Name = "openAnimToolStripMenuItem";
-			openAnimToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			openAnimToolStripMenuItem.Text = "Anim...";
-			openAnimToolStripMenuItem.Click += openAnimToolStripMenuItem_Click;
-			// 
-			// openMultipleToolStripMenuItem
-			// 
-			openMultipleToolStripMenuItem.Name = "openMultipleToolStripMenuItem";
-			openMultipleToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-			openMultipleToolStripMenuItem.Text = "Open KAnim...";
-			openMultipleToolStripMenuItem.Click += openMultipleToolStripMenuItem_Click;
 			// 
 			// MainForm
 			// 
