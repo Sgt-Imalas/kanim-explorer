@@ -46,6 +46,7 @@
 			saveTextureAtlasAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			saveBuildAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			saveAnimAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			saveAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
 			exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			exportEmptyAnimbytesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,7 +71,6 @@
 			propertyGrid = new System.Windows.Forms.PropertyGrid();
 			label2 = new System.Windows.Forms.Label();
 			imageListIcons = new System.Windows.Forms.ImageList(components);
-			saveAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)splitContainerOuter).BeginInit();
 			splitContainerOuter.Panel2.SuspendLayout();
@@ -110,14 +110,14 @@
 			// openMultipleToolStripMenuItem
 			// 
 			openMultipleToolStripMenuItem.Name = "openMultipleToolStripMenuItem";
-			openMultipleToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-			openMultipleToolStripMenuItem.Text = "KAnim Files...";
+			openMultipleToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+			openMultipleToolStripMenuItem.Text = "KAnim...";
 			openMultipleToolStripMenuItem.Click += openMultipleToolStripMenuItem_Click;
 			// 
 			// openSCMLToolStripMenuItem
 			// 
 			openSCMLToolStripMenuItem.Name = "openSCMLToolStripMenuItem";
-			openSCMLToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+			openSCMLToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
 			openSCMLToolStripMenuItem.Text = "SCML Project...";
 			openSCMLToolStripMenuItem.Click += openSCMLToolStripMenuItem_Click_1;
 			// 
@@ -125,8 +125,8 @@
 			// 
 			individualKAnimFilesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { openTextureToolStripMenuItem, openBuildToolStripMenuItem, openAnimToolStripMenuItem });
 			individualKAnimFilesToolStripMenuItem1.Name = "individualKAnimFilesToolStripMenuItem1";
-			individualKAnimFilesToolStripMenuItem1.Size = new System.Drawing.Size(191, 22);
-			individualKAnimFilesToolStripMenuItem1.Text = "Individual KAnim Files";
+			individualKAnimFilesToolStripMenuItem1.Size = new System.Drawing.Size(223, 22);
+			individualKAnimFilesToolStripMenuItem1.Text = "Open Individual KAnim Files";
 			// 
 			// openTextureToolStripMenuItem
 			// 
@@ -151,29 +151,30 @@
 			saveAsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { saveAllAsToolStripMenuItem, exportSCMLToolStripMenuItem, individualKAnimFilesToolStripMenuItem });
 			saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
 			saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			saveAsToolStripMenuItem.Text = "Save As...";
+			saveAsToolStripMenuItem.Text = "Save...";
 			// 
 			// saveAllAsToolStripMenuItem
 			// 
 			saveAllAsToolStripMenuItem.Enabled = false;
 			saveAllAsToolStripMenuItem.Name = "saveAllAsToolStripMenuItem";
-			saveAllAsToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-			saveAllAsToolStripMenuItem.Text = "KAnim Files...";
+			saveAllAsToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+			saveAllAsToolStripMenuItem.Text = "KAnim...";
 			saveAllAsToolStripMenuItem.Click += saveAllAsToolStripMenuItem_Click;
 			// 
 			// exportSCMLToolStripMenuItem
 			// 
 			exportSCMLToolStripMenuItem.Enabled = false;
 			exportSCMLToolStripMenuItem.Name = "exportSCMLToolStripMenuItem";
-			exportSCMLToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+			exportSCMLToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
 			exportSCMLToolStripMenuItem.Text = "SCML Project...";
+			saveAllAsToolStripMenuItem.Click += exportSCMLToolStripMenuItem_Click;
 			// 
 			// individualKAnimFilesToolStripMenuItem
 			// 
 			individualKAnimFilesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { saveTextureAtlasAsToolStripMenuItem, saveBuildAsToolStripMenuItem, saveAnimAsToolStripMenuItem, saveAllToolStripMenuItem });
 			individualKAnimFilesToolStripMenuItem.Name = "individualKAnimFilesToolStripMenuItem";
-			individualKAnimFilesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-			individualKAnimFilesToolStripMenuItem.Text = "Individual KAnim Files";
+			individualKAnimFilesToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+			individualKAnimFilesToolStripMenuItem.Text = "Save Individual KAnim Files As...";
 			// 
 			// saveTextureAtlasAsToolStripMenuItem
 			// 
@@ -181,6 +182,7 @@
 			saveTextureAtlasAsToolStripMenuItem.Name = "saveTextureAtlasAsToolStripMenuItem";
 			saveTextureAtlasAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			saveTextureAtlasAsToolStripMenuItem.Text = "Save Texture As...";
+			saveTextureAtlasAsToolStripMenuItem.Click += SaveTextureAtlasAsToolStripMenuItem_Click;
 			// 
 			// saveBuildAsToolStripMenuItem
 			// 
@@ -188,6 +190,7 @@
 			saveBuildAsToolStripMenuItem.Name = "saveBuildAsToolStripMenuItem";
 			saveBuildAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			saveBuildAsToolStripMenuItem.Text = "Save Build As...";
+			saveTextureAtlasAsToolStripMenuItem.Click += SaveTextureAtlasAsToolStripMenuItem_Click;
 			// 
 			// saveAnimAsToolStripMenuItem
 			// 
@@ -195,6 +198,14 @@
 			saveAnimAsToolStripMenuItem.Name = "saveAnimAsToolStripMenuItem";
 			saveAnimAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			saveAnimAsToolStripMenuItem.Text = "Save Anim As...";
+			saveTextureAtlasAsToolStripMenuItem.Click += SaveTextureAtlasAsToolStripMenuItem_Click;
+			// 
+			// saveAllToolStripMenuItem
+			// 
+			saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
+			saveAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			saveAllToolStripMenuItem.Text = "Save All As...";
+			saveAllToolStripMenuItem.Click += saveAllAsToolStripMenuItem_Click;
 			// 
 			// toolStripSeparator5
 			// 
@@ -404,12 +415,6 @@
 			imageListIcons.TransparentColor = System.Drawing.Color.Transparent;
 			imageListIcons.Images.SetKeyName(0, "build");
 			imageListIcons.Images.SetKeyName(1, "sprite");
-			// 
-			// saveAllToolStripMenuItem
-			// 
-			saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
-			saveAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			saveAllToolStripMenuItem.Text = "Save All As...";
 			// 
 			// MainForm
 			// 
