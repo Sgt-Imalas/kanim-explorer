@@ -43,9 +43,9 @@
 			saveAllAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			exportSCMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			individualKAnimFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			saveAnimAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			saveTextureAtlasAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			saveBuildAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			saveAnimAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
 			exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			exportEmptyAnimbytesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,6 +70,7 @@
 			propertyGrid = new System.Windows.Forms.PropertyGrid();
 			label2 = new System.Windows.Forms.Label();
 			imageListIcons = new System.Windows.Forms.ImageList(components);
+			saveAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)splitContainerOuter).BeginInit();
 			splitContainerOuter.Panel2.SuspendLayout();
@@ -169,17 +170,10 @@
 			// 
 			// individualKAnimFilesToolStripMenuItem
 			// 
-			individualKAnimFilesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { saveTextureAtlasAsToolStripMenuItem, saveBuildAsToolStripMenuItem, saveAnimAsToolStripMenuItem });
+			individualKAnimFilesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { saveTextureAtlasAsToolStripMenuItem, saveBuildAsToolStripMenuItem, saveAnimAsToolStripMenuItem, saveAllToolStripMenuItem });
 			individualKAnimFilesToolStripMenuItem.Name = "individualKAnimFilesToolStripMenuItem";
 			individualKAnimFilesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
 			individualKAnimFilesToolStripMenuItem.Text = "Individual KAnim Files";
-			// 
-			// saveAnimAsToolStripMenuItem
-			// 
-			saveAnimAsToolStripMenuItem.Enabled = false;
-			saveAnimAsToolStripMenuItem.Name = "saveAnimAsToolStripMenuItem";
-			saveAnimAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			saveAnimAsToolStripMenuItem.Text = "Save Anim As...";
 			// 
 			// saveTextureAtlasAsToolStripMenuItem
 			// 
@@ -194,6 +188,13 @@
 			saveBuildAsToolStripMenuItem.Name = "saveBuildAsToolStripMenuItem";
 			saveBuildAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			saveBuildAsToolStripMenuItem.Text = "Save Build As...";
+			// 
+			// saveAnimAsToolStripMenuItem
+			// 
+			saveAnimAsToolStripMenuItem.Enabled = false;
+			saveAnimAsToolStripMenuItem.Name = "saveAnimAsToolStripMenuItem";
+			saveAnimAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			saveAnimAsToolStripMenuItem.Text = "Save Anim As...";
 			// 
 			// toolStripSeparator5
 			// 
@@ -404,6 +405,12 @@
 			imageListIcons.Images.SetKeyName(0, "build");
 			imageListIcons.Images.SetKeyName(1, "sprite");
 			// 
+			// saveAllToolStripMenuItem
+			// 
+			saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
+			saveAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			saveAllToolStripMenuItem.Text = "Save All As...";
+			// 
 			// MainForm
 			// 
 			AllowDrop = true;
@@ -478,6 +485,7 @@
 		private System.Windows.Forms.ToolStripMenuItem openTextureToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem openBuildToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem openAnimToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem saveAllToolStripMenuItem;
 	}
 }
 
